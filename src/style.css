@@ -1,0 +1,605 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100px;
+  min-height: 90vh;
+  background-color: #ffa127ce; 
+  margin: 0; 
+}
+
+h1 {
+  font: size 10px;;
+  line-height: 1.5;
+  font-family:'Courier New', Courier, monospace;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #d68739c5;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+
+/*这是App.vue的样式*/
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(115, 64, 10, 0.495);
+  padding: 10px 20px;
+  z-index: 999;
+}
+.nav-list {
+  display: flex;
+  gap: 260px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-family: "楷体", serif;
+  font-size: 22px;
+}
+.nav-list a:hover {
+  color: #d4b886;
+}
+
+
+/* 音乐控制按钮样式 */
+.audio-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+.audio-control button {
+  padding: 8px 16px;
+  background-color: rgba(115, 64, 10, 0.8);
+  color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  font-family: "楷体", serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+  /*这是Home.vue的样式*/
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* 全屏容器 */
+.full-video-wrap {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #140808, #2c1010);
+}
+
+/* 视频*/
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top; 
+  position: absolute；
+  top：0;
+  left: 0；
+  filter： brightness(0.65);
+  z-index: 1;
+}
+
+/* 悬浮内容 */
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f1ece6;
+  z-index: 2;
+  text-shadow: 0 2px 15px rgba(237, 224, 124, 0.8);
+}
+
+.center-content h1 {
+  font-size: 190px;
+  font-weight: bold;
+  font-family: 华文行楷;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.center-content p {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+  opacity: 0.9;
+  font-family:'Times New Roman', Times, serif;
+  color: #fff;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn-primary {
+  padding: 16px 48px;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: rgba(137, 153, 157, 0.774);
+  color: #f3f0f0;
+}
+.btn-primary:hover {
+  background: #b74119;
+  transform: scale(1.05);
+}
+
+
+
+/* About.vue的css样式 */
+.page-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #96590aa8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* 原有图片容器 */
+.image-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 左右演员图片 */
+.actor-img {
+  width: 330px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* 中间轮播图 */
+.carousel {
+  position: relative;
+  width: 1020px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 50px;
+  border: none;
+  background-color: rgba(10, 10, 10, 0.032);
+  color: #fdfbfb;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* 下方长图片 */
+.group-img {
+  width:1320px;
+  height: 247px;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  align-items: center; 
+}
+
+
+
+
+/* 抠图部分*/
+.image-koutu {
+  display: flex;
+  gap: 0px; 
+  justify-content: center;
+  width: 100%;
+}
+.koutu-img {
+  width: 560px; 
+  height: 440px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+  
+}
+
+
+
+/* 剧情简介部分样式 */
+.story-section {
+  width: calc(330px * 2 + 1020px + 20px * 2);
+  background-color: #eaa666;
+  padding: 25px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.section-title {
+  color: #0e0d0d;
+  font-family: "宋体", serif;
+  font-weight:bold;
+  font-size: 40px;
+  margin: 0 0 15px 0;
+  border-left: 4px solid #805024;
+  padding-left: 10px;
+  margin-left: 0%;
+}
+.story-content {
+  color: #050505;
+  font-family: "宋体", serif;
+  font-weight:bold;
+  font-size:28px;
+  line-height: 1.8;
+}
+.story-content p {
+  margin: 0 0 12px 0;
+}
+.story-tag {
+  margin-top: 15px;
+  color: #050505;
+  font-style: italic;
+}
+
+
+
+/* 主要角色介绍部分 */
+.characters-section {
+  width: calc(330px * 2 + 1020px + 20px * 2);
+  background-color: rgba(245, 230, 200, 0.9);
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-top: 10px;
+}
+.characters-content {
+  display: flex;
+  gap: 30px;
+}
+.character-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.character-img {
+  width: 240px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+.character-info h3 {
+  font-family: "楷体", serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #331a00;
+  margin: 0 0 5px 0;
+}
+.character-info p {
+  font-family: "宋体", serif;
+  font-size: 16px;
+  color: #331a00;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* 关系图展示 */
+/* 大图片容器 */
+.big-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.big-image {
+  width: 800px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.big-image:hover {
+  transform: scale(1.03);
+}
+
+/* 全屏图片查看器 */
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.viewer-image {
+  width: 100vw;     
+  height: 100vh;   
+  object-fit: contain; 
+}
+
+
+/* 剧照区域整体样式 */
+.still-section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 20px auto;
+  background-color: #eaa666; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* 角色标题（藏海/香暗茶） */
+.character-title {
+  font-family: "楷体", serif;
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+/* 剧照网格（横向排列） */
+.stills-grid {
+  display: flex;
+  gap: 10px; 
+  overflow-x: auto; 
+  padding-bottom: 10px;
+}
+
+/* 单张剧照样式 */
+.still-img {
+  width: 200px; 
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+/* 悬停轻微放大 */
+.still-img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/*非物质文化遗产图片集样式 */
+.gallery-section {
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.gallery-title {
+  font-family: "楷体", serif;
+  font-size: 24px;
+  color: #5c3b1c;
+  margin-bottom: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease; 
+}
+
+.gallery-img:hover {
+  transform: scale(1.05); 
+}
+
+
+
+/* 评价区域 */
+.reviews-section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 40px auto;
+  background-color: #eaa666; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* 评价（专家评价/网友评价） */
+.character-stills {
+  margin-bottom: 30px; 
+}
+
+/* 评价标题（专家评价/网友评价） */
+.character-title {
+  font-family: "楷体", serif;
+  font-size: 36px;
+  color: #000;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+/* 评价图片网格 */
+.reviews-grid {
+  display: flex;
+  gap: 10px; 
+  width: 90%;
+}
+
+/* 评价图片样式 */
+.reviews-img {
+  flex: 1; 
+  width: 390px;
+  height: 390px; 
+  object-fit:cover; 
+  border-radius: 4px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+/* 悬停轻微放大效果 */
+.reviews-img:hover {
+  transform: scale(1.03);
+}
+
+
+
+/* 新增页脚样式 */
+.footer-container {
+  width: 100%;
+  max-width: 1320px; 
+  margin: 40px auto 0;
+  background-color: rgba(115, 64, 10, 0.8);
+  color: #f4f4f4;
+  padding: 30px 20px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.3); 
+  font-family: "楷体", serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 底部分割线+小字 */
+.footer-bottom {
+  text-align: center;
+  padding-top: 10px;
+}
+.small-text {
+  font-size: 14px;
+  color: #f0e6d2;
+  margin: 10px 0 0;
+}
+
+/* 响应式适配*/
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-left, .footer-middle, .footer-right {
+    text-align: center;
+  }
+}
