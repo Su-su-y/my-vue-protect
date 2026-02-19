@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base:'/my-vue-protect/'
+  // 这里必须是你的仓库名，前面要加斜杠
+  base: '/my-vue-protect/' 
 })
