@@ -47,7 +47,7 @@ const isPlaying = ref(false)
 
 
 onMounted(() => {
-  audio.value = new Audio('/public/music/zhz_music.mp3') 
+  audio.value = new Audio(new URL('@/assets/music/zhz_music.mp3', import.meta.url).href)
 
   audio.value.loop = true
  

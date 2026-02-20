@@ -1,7 +1,7 @@
 // 导入Vue Router核心方法和页面组件
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Home from '@/views/Home.vue'
+import About from '@/views/About.vue'
 
 // 定义路由规则
 const routes = [
